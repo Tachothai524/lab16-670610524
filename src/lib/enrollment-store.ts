@@ -5,7 +5,7 @@ import {
   courses as initialCourses,
   // enrollments as initialEnrollments,
 } from "@/lib/mock-data";
-import type { Course, Enrollment, Student } from "@/lib/types";
+import type { Course, Student } from "@/lib/types";
 
 type EnrollmentStore = {
   students: Student[];
@@ -31,40 +31,7 @@ type EnrollmentStore = {
 };
 
 export const useEnrollmentStore = create<EnrollmentStore>()(
-//   (set) => ({
-//   students: initialStudents,
-//   courses: initialCourses,
-//   // enrollments: initialEnrollments,
-  
 
-//   // enroll: (studentId, courseId) =>
-//   //   set((state) => ({
-//   //     enrollments: state.enrollments.some(
-//   //       (e) => e.studentId === studentId && e.courseId === courseId,
-//   //     )
-//   //       ? state.enrollments
-//   //       : [...state.enrollments, { studentId, courseId }],
-//   //   })),
-
-//   // drop: (studentId, courseId) =>
-//   //   set((state) => ({
-//   //     enrollments: state.enrollments.filter(
-//   //       (e) => !(e.studentId === studentId && e.courseId === courseId),
-//   //     ),
-//   //   })),
-
-//   removeStudent: (studentId) =>
-//     set((state) => ({
-//       students: state.students.filter((s) => s.studentId !== studentId),
-//       // enrollments: state.enrollments.filter((e) => e.studentId !== studentId),
-//     })),
-
-//   removeCourse: (courseId) =>
-//     set((state) => ({
-//       courses: state.courses.filter((c) => c.courseCode !== courseId),
-//       // enrollments: state.enrollments.filter((e) => e.courseId !== courseId),
-//     })),
-// }),
 persist(
     (set) => ({
       students: initialStudents,
